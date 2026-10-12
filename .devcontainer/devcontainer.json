@@ -5,12 +5,14 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "postCreateCommand": "bash .devcontainer/prepare.sh",
+  "postStartCommand": "bash .devcontainer/autostart.sh",
   "forwardPorts": [
     8443
   ],
   "portsAttributes": {
     "8443": {
       "label": "PentAGI",
+      "protocol": "https",
       "onAutoForward": "notify"
     }
   }
