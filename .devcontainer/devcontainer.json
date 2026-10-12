@@ -1,16 +1,16 @@
 {
   "name": "PentAGI Test Lab",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu24.04",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "postCreateCommand": "bash .devcontainer/prepare.sh",
   "forwardPorts": [
-    8080
+    8443
   ],
   "portsAttributes": {
-    "8080": {
-      "label": "PentAGI (when configured)",
+    "8443": {
+      "label": "PentAGI",
       "onAutoForward": "notify"
     }
   }
